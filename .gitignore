@@ -13,3 +13,4 @@ YOLOv3_implementation/data/
 YOLOv3_implementation/cfg/
 YOLOv3_implementation/yolov3.weights
 YOLOv3_implementation/__pycache__/
+YOLOv3_implementation/*.mp4

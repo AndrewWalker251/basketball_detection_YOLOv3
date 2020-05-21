@@ -93,8 +93,14 @@ videofile = args.videofile #or path to the video file.
 
 cap = cv2.VideoCapture(videofile)  
 
-#cap = cv2.VideoCapture(0)  for webcam
+fps = cap.get(cv2.CAP_PROP_FPS)
+print('original fps {}'.format(fps))
 
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+annotated_video = cv2.VideoWriter("result.mp4", fourcc, 25, (640,480))
+#annotated_video = cv2.VideoWriter('result.mp4',  cv2.VideoWriter_fourcc(*'mp4v'))
+
+#cap = cv2.VideoCapture(0)  for webcam
 assert cap.isOpened(), 'Cannot capture source'
 
 frames = 0  
@@ -127,9 +133,6 @@ while cap.isOpened():
                 break
             continue
         
-        
-        
-
         im_dim = im_dim.repeat(output.size(0), 1)
         scaling_factor = torch.min(416/im_dim,1)[0].view(-1,1)
         
@@ -149,6 +152,7 @@ while cap.isOpened():
         list(map(lambda x: write(x, frame), output))
         
         cv2.imshow("frame", frame)
+        annotated_video.write(frame)
         
         
         key = cv2.waitKey(1)
