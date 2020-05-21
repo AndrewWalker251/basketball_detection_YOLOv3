@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 24 21:57:45 2020
+
+@author: AWalker8
+"""
+images_input/
+images_output/
+yolov3.weights
+data/
+.ipynb_checkpoints/
+YOLOv3_implementation/data/
+YOLOv3_implementation/cfg/
+YOLOv3_implementation/yolov3.weights
+YOLOv3_implementation/__pycache__/
