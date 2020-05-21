@@ -4,10 +4,10 @@
 
 [//]: # (Image References)
 
-[image1]: .YOLOv3_implementation/examples/det_andy_murray.jpg "Andy Murray with Objects detected"
-[image2]: .YOLOv3_implementation/examples/bball_1.png "Basketball example 1"
-[image3]: .YOLOv3_implementation/examples/bball_2.png "Basketball example 2"
-[image4]: .YOLOv3_implementation/examples/bball_3.png "Basketball example 3"
+[image1]: ./YOLOv3_implementation/examples/det_andy_murray.jpg "Andy Murray with Objects detected"
+[image2]: ./YOLOv3_implementation/examples/bball_1.PNG "Basketball example 1"
+[image3]: ./YOLOv3_implementation/examples/bball_2.PNG "Basketball example 2"
+[image4]: ./YOLOv3_implementation/examples/bball_3.PNG "Basketball example 3"
 
 
 ### Intro
@@ -53,7 +53,7 @@ The first image shows the process performing well.
 
 ![alt text][image2]
 
-This second image shows that whilst the picture is nearly identical to the first the basketball is not currently detected. This type of implementation takes each frame as independant. For an application where always keeping track of this ball would be really important a method could applied that takes into account what was in the previous frames. The challenge with this is that it will become computationally more challenging. 
+This second image shows that whilst the picture is nearly identical to the first the basketball is not currently detected. This type of implementation takes each frame as independant. For an application where always keeping track of this ball would be really important a method could be applied that takes into account what was in the previous frames. The challenge with this is that it will become computationally more challenging. 
 
 ![alt text][image3]
 
